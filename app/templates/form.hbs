@@ -1,0 +1,72 @@
+{{!Форма обратной связи}}
+
+{{> layout/header}}
+
+<div class="container">
+
+
+  <div class="form-feedback">
+    <div class="form-feedback__inner">
+      <div class="form-feedback__img " style="background-image: url('../static/images/img.jpg');"></div>
+      <div class="form-feedback__img " style="background-image: url('../static/images/img2.jpg');"></div>
+      <div class="form-feedback__img " style="background-image: url('../static/images/img3.jpg');"></div>
+      <div class="form-feedback__tab">
+        <div class="tab-item active orange">1</div>
+        <div class="tab-item gold">2</div>
+        <div class="tab-item red">3</div>
+      </div>
+      <div class="form-feedback__info  orange ">
+        <form class="form" name='one'>
+
+          {{> ui/input  placeholder='Фамилия' name='name' }}
+          {{> ui/input  placeholder='Имя' name='name' }}
+
+          {{> ui/input  placeholder='Отчество' name='name' }}
+          <div class="form-radiobutton">
+            {{> ui/radio id=1 name='radio' label='Мужчина'}}
+            {{> ui/radio id=2 name='radio' label='Женщина'}}
+          </div>
+          {{> ui/input  placeholder='Дата рождения' name ='birthday' id='date'}}
+
+          {{> ui/checkbox  id=3 label='Соглашаюсь с условиями участия' name='checkbox'}}
+          <div class="btn-list__item">
+            <button class="btn btn-primary">Продолжить</button>
+          </div>
+        </form>
+      </div>
+      <div class="form-feedback__info gold">
+        <form class="form" >
+
+          {{> ui/input  placeholder='Телефон' id ='phone' name='phone' }}
+          {{> ui/input  placeholder='Email' name='email' }}
+          {{> ui/input  placeholder='Пароль' type='password' name='password'}}
+          {{> ui/input  placeholder='Повторите пароль' type='password' name='password2'}}
+          <div class="btn-list__item">
+            <button class="btn btn-primary btn__gold ">Продолжить</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="form-feedback__info red">
+        <form class="form">
+          <div class="form-text">
+            На номер <b>+375293334455</b> отправлен код подтверждения
+            <p>Введите его в поле ниже:</p>
+          </div>
+
+          {{> ui/input  placeholder='Код' input-class='form-light-red'}}
+          <div class="btn-list__item">
+            <button class="btn btn-primary btn__red">Присоединиться</button>
+            <div class="form-text">
+              <p class="js-code" style="cursor:pointer">Отправить код еще раз</p>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> layout/footer}}

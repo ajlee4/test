@@ -1,0 +1,143 @@
+.form-feedback {
+  margin-top: 50px;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite('logo');
+      top: -45px;
+      left: -45px;
+    }
+  }
+
+  &__img {
+    min-width: 576px;
+    max-height: 576px;
+    background-repeat: no-repeat;
+  }
+
+  &__tab {
+    display: flex;
+    position: absolute;
+    top: -31px;
+    left: 55%;
+
+    .tab {
+      &-item {
+        border: 1px solid #E93A29;
+        cursor: pointer;
+        font-size: 24px;
+        margin-right: 32px;
+        padding: 5px 28px;
+        height: 34px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &-item.gold {
+        border-color: #d77b00;
+      }
+
+      &-item.red {
+        border-color: #ec5300;
+      }
+
+      &-item.orange {
+        border-color: #ff6e20;
+      }
+
+      &-item.active {
+        border-bottom: solid #fff;
+        border-width: 2px;
+      }
+    }
+  }
+
+  &__info {
+    width: 576px;
+    height: 576px;
+    padding: 80px 72px 88px 120px;
+    border: 2px solid transparent;
+    border-left: 0;
+    border-radius: 0 0 50px 0;
+
+    .form {
+      animation: fade 0.8s;
+      width: 384px;
+
+      &-field {
+        margin-top: 32px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &-radiobutton {
+        display: flex;
+        justify-content: space-between;
+        width: 348px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+      }
+
+      .check-box {
+        margin-top: 14px;
+        margin-bottom: 24px;
+      }
+
+      &-text {
+        padding-top: 50px;
+        font-size: 24px;
+        text-align: center;
+
+        &:last-child {
+          padding-top: 0;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__info.red {
+    border-color: #ec5300;
+  }
+
+  &__info.gold {
+    border-color: #d77b00;
+  }
+
+  &__info.orange {
+    border-color: #ff6e20;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.tooltip-error {
+    position: absolute;
+}

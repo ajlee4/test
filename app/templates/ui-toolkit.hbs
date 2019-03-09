@@ -1,0 +1,67 @@
+{{!Ui toolkit}}
+
+{{> layout/head }}
+
+<section class="ui">
+  <header class="ui__title">
+    <h1>UI Toolkit</h1>
+  </header>
+
+  <main class="ui__container">
+    <section class="ui__main">
+      {{> blocks/ui-section-start title='Checkbox, radio button' id='ui-checkbox'}}
+
+      <div class="row">
+        <div class="col-md-6">
+          {{> ui/radio id=1 name='radio1' label='Example label'}}
+          <br>
+          {{> ui/radio id=2 name='radio2' label='Example label' checked=1}}
+        </div>
+
+        <div class="col-md-6">
+          {{> ui/checkbox id=3 label='Example label'}}
+          <br>
+          {{> ui/checkbox id=4 label='Example label' checked=1}}
+        </div>
+      </div>
+      {{> blocks/ui-section-end}}
+
+      {{> blocks/ui-section-start title='Buttons' id='ui-buttons'}}
+
+      <div class="btn-list">
+        <div class="btn-list__item">
+          <button class="btn btn-primary">Продолжить</button>
+        </div>
+
+        <div class="btn-list__item">
+          <button class="btn btn-secondary">Продолжить</button>
+        </div>
+
+        <div class="btn-list__item">
+          <button class="btn btn-light-orange">Продолжить</button>
+        </div>
+      </div>
+
+      {{> blocks/ui-section-end}}
+
+        {{> blocks/ui-section-start title='Forms' id='ui-forms'}}
+
+        <div class="row">
+          <div class="col-md-6">
+            {{> ui/input  placeholder='Фамилия' }}
+          </div>
+          <div class="col-md-6">
+            {{> ui/input  input-class='form-light-gray' placeholder='Фамилия'}}
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-6">
+            {{> ui/input  input-class='form-error form-light-gray' class="error" error=1}}
+          </div>
+          <div class="col-md-6">
+            {{> ui/input  input-class='form-error ' class="error error-top" error=1 }}
+          </div>
+        </div>
+{{> layout/bottom }}
